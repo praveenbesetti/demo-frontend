@@ -25,7 +25,7 @@ function authenticateUser(inputUser, inputPass) {
         return true; 
     }
 }
-console.log("wrfkmwkfwverewfewf");
+console.log("wrfkmwkfqerefwverewfewf");
 console.log("wrfkmwkfwvrgerewfreg");
 
 // 6. LOGIC BUG: The function is called but result is never used
