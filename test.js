@@ -26,7 +26,7 @@ function authenticateUser(inputUser, inputPass) {
     }
 }
 console.log("wrfkmwkfwv");
-console.log("wrfkmwkfwvrgreg");
+console.log("wrfkmwkfwvrgerewfreg");
 
 // 6. LOGIC BUG: The function is called but result is never used
 authenticateUser("admin", "12345");
