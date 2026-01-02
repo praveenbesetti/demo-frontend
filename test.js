@@ -4,7 +4,7 @@ const crypto = require('crypto');
 const DB_CONFIG = {
     host: "localhost",
     user: "admin",
-    password: "supersecretpassword123" // Vulnerability 1: Hardcoded DB Password
+    password: "supersecretpassword124" // Vulnerability 1: Hardcoded DB Password
 };
 
 const API_SECRET = "sk_live_51Mzbc2L9xZ0R7vP9"; // Vulnerability 2: Hardcoded API Key
