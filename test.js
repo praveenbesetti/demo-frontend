@@ -1,8 +1,22 @@
-const API_KEY = "sk-1234567890abcdef1234567890abcdef"; // Mock secret
-const DB_PASSWORD = "admin_password_99";
+// loginService.js - testing line-by-line audit
+const crypto = require('crypto');
 
-function connect() {
-    console.log("Connecting with key: " + API_KEY);
+const DB_CONFIG = {
+    host: "localhost",
+    user: "admin",
+    password: "supersecretpassword123" // Vulnerability 1: Hardcoded DB Password
+};
+
+const API_SECRET = "sk_live_51Mzbc2L9xZ0R7vP9"; // Vulnerability 2: Hardcoded API Key
+
+function authenticateUser(inputUser, inputPass) {
+    // Vulnerability 3: Weak MD5 hashing (should use bcrypt)
+    const hash = crypto.createHash('md5').update(inputPass).digest('hex');
+    
+    if (inputUser === "root") {
+        console.log("Root access attempt with key: " + API_SECRET);
+        return true;
+    }
 }
-console.log(API_KEY);
-connect();
+
+authenticateUser("admin", "12345");
