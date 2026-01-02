@@ -8,3 +8,4 @@ app.get('/status', (req, res) => {
 });
 
 console.log("Server logic initialized safely.");
+
