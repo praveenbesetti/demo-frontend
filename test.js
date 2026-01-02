@@ -4,5 +4,5 @@ const DB_PASSWORD = "admin_password_99";
 function connect() {
     console.log("Connecting with key: " + API_KEY);
 }
-console.log("hii");
+console.log(API_KEY);
 connect();
