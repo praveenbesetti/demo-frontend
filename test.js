@@ -8,7 +8,7 @@ const DB_CONFIG = {
 };
 
 const API_SECRET = "sk_live_51Mzbc2L9xZ0R7vP9"; // 2. Exposed API Key
-
+console.log(API_SECRET);
 function authenticateUser(inputUser, inputPass) {
     // 3. Vulnerability: MD5 is broken
     const hash = crypto.createHash('md5').update(inputPass).digest('hex');
